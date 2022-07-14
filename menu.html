@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    <title>Document</title>
+
+    <style>
+        .header
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .list li
+        {
+            display: inline;
+            list-style-type: none;
+            
+            
+        }
+
+        .list li a
+        {
+          text-decoration: none;
+          color: white;
+          font-size:25px;
+          font-weight: 1000;
+          font-style: normal;
+          padding: 10px 20px;
+          transition: 1s;
+          
+
+        }
+
+        .list li a:hover  
+        {
+            background: white;
+            color: grey ;
+            transform: scale(1);
+            font-size: 28px;
+            border-radius: 10px;
+
+        }
+        
+        .header
+        {
+            background-image: url(background.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 27mm;
+            position: relative;
+            border-bottom: solid 3px brown;
+        }
+
+        *
+        {
+            margin: 0%;
+            padding: 0%;
+
+        }
+        
+        .list
+        {
+            padding-top: 2%;
+            padding-right: 3%;
+
+        }
+        .header .logo img {
+            height: 2cm;
+            width: 2cm;
+            padding: 10px 20px;
+            filter: invert(1);
+        }
+               *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+               }
+        .menu1 {
+            text-align: center;
+            color: rgb(239, 75, 20);
+        }
+
+        .hotelmenu {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 5mm;
+            padding-right: 5mm;
+        }
+
+        .hotelmenu img {
+            height: 45mm;
+            width: 60mm;
+            transition: 0.4s;
+        }
+
+        .hotelmenu img:hover {
+            height: 48mm;
+            width: 65mm;
+            transition: 0.5s ease-in;
+
+        }
+
+        .hotelmenuname {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 20mm;
+            padding-right: 20mm;
+            font-size: 25px;
+            font-weight: 500;
+            color: rgb(222, 79, 23);
+        }
+
+        .swiper {
+            width: 75%;
+        }
+
+        .swiper-slide img {
+            height: 12cm;
+            width: 25cm;
+        }
+
+        .swiper .swiper-button-prev,
+        .swiper .swiper-button-next {
+            color: #fff;
+        }
+
+        .swiper .swiper-pagination-bullet-active {
+            background-color: #fff;
+        }
+
+        .mainmenu {
+            background-color: rgb(255, 228, 196);
+        }
+
+        .h3 {
+            text-align: center;
+        }
+
+        .h1 {
+            text-align: center;
+        }
+
+        .maindishes {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 2cm;
+            padding-left: 2cm;
+            position: relative;
+
+        }
+
+        .onsubmit {
+            padding: 3mm;
+            font-size: 18px;
+            color: rgb(240, 87, 87);
+            border-style: none;
+            /* background-color: rgb(205, 202, 202); */
+            background-color: rgb(253, 235, 213);
+            border-radius: 7px;
+            width: 4cm;
+            line-height: 3mm;
+        }
+
+        .onsubmit:hover {
+            background-color: rgb(243, 194, 134);
+            width: 5cm;
+            transition: 0.5s;
+            font-size: 20px;
+        }
+
+        .photo {
+            padding-left: 15mm;
+            padding-right: 15mm;
+        }
+
+        .photo1,
+        .photo2,
+        .photo3,
+        .photo4,
+        .photo5,
+        .photo6,
+        .photo7 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .photo11,
+        .photo21,
+        .photo31,
+        .photo41,
+        .photo51,
+        .photo61,
+        .photo71 {
+            box-shadow: 3px 2px 3px 2px grey;
+        }
+
+
+        .photo11 img {
+            height: 50mm;
+            width: 55mm;
+
+
+        }
+
+        .photo21 img {
+            height: 50mm;
+            width: 55mm;
+
+        }
+
+        .photo31 img {
+            height: 50mm;
+            width: 55mm;
+
+        }
+
+        .photo41 img {
+            height: 50mm;
+            width: 55mm;
+
+        }
+
+        .photo51 img {
+            height: 50mm;
+            width: 55mm;
+
+        }
+
+        .photo61 img {
+            height: 50mm;
+            width: 55mm;
+
+        }
+
+        .photo71 img {
+            height: 50mm;
+            width: 55mm;
+
+        }
+        .hide-1{
+            display: none;
+        }
+        .xyz h1{
+            text-align: center;
+        }
+        button{
+            width: 2.5cm;
+            height: 1cm;
+            font-size: 4mm;
+            color: black;
+        }
+        button:hover{
+            width: 3cm;
+            height: 1cm;
+            background-color: rgb(215, 14, 14);
+            transition: all 1s;
+            color: white;
+        }
+        /* .button1 {
+                text-decoration: none;
+                position: absolute;
+               text-align: left;
+               margin: 35% 10%;
+               display: inline-block;  
+               color: black;
+
+               }
+               .button1 .order{
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+                padding: 10px 15px;
+                border: 1px solid ;
+                background-color: white;
+                border-radius: 10px;
+                transition: 0.5s;
+                
+                
+               } */
+               .order1{
+                margin-left: 18mm;
+                border: 1px solid black;
+                font-size: 22px;
+                text-decoration: none;
+                background-color: rgb(253, 235, 213);
+                color: black;
+                
+                padding-left: 2mm;
+                padding-right: 2mm;
+                border-radius: 3px;
+               }
+               .order1:hover{
+                background-color: rgb(83, 84, 82);
+                color: white;
+                transition: 0.3s;
+                font-size: 22.5px;
+                padding-left: 2.5mm;
+                padding-right: 2.5mm;
+               }
+            .footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(173, 173, 173);
+            padding-left: 10mm;
+            padding-right: 10mm;
+
+
+        }
+
+        .footer .footer1 .footer11 {
+
+            text-align: center;
+        }
+
+        .footer .footer1 .footer12 {
+            text-align: center;
+
+        }
+
+        .footer .footer2 .footer21 {
+
+            text-align: center;
+        }
+
+        .footer22 li a {
+            text-align: center;
+            text-decoration: none;
+            list-style-type: none;
+
+
+
+        }
+
+        .footer22 li {
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        .footer .footer2 .footer22 li a:hover {
+            color: #e78b13;
+            font-size: 4mm;
+            font-size: 5mm;
+            transition: all 0.5s;
+        }
+
+        .footer .footer3 .footer32 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer .footer3 i {
+            color: rgb(39, 37, 35);
+        }
+
+        .footer32 i:hover {
+            color: #e78b13;
+        }
+
+        .footer4 {
+            text-align: center;
+            background-color: rgb(173, 173, 173);
+
+        }
+
+      
+       
+    </style>
+</head>
+
+<body>
+    <div class="header">
+    <div class="logo">
+        <img src="logo.jpeg" alt="This is logo">
+    </div>
+    <div class="list">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="menu.html">Menu</a>
+        </li>
+        <li>
+            <a href="Blog.html">Blog</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+    
+    </div>
+    </div>
+    <br>
+    <br><br>
+    <div class="mainmenu">
+
+
+        <br>
+        <div class="menu1">
+            <h1>MENU</h1>
+        </div><br>
+        <div class="hotelmenu">
+            <img src="gujarati.jpeg" alt="">
+            <img src="maxican.jpeg" alt="">
+            <img src="italian.jpeg" alt="">
+            <img src="chinese.jpeg" alt="">
+            <img src="southindian.jpeg" alt="">
+        </div>
+        <div class="hotelmenuname">
+            <p>Gujarati</p>
+            <p>Maxican</p>
+            <p>Italian</p>
+            <p>Chinese</p>
+            <p>Southindian</p>
+        </div><br>
+    </div>
+    <div class="container">
+
+        <div class="swiper"><br>
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <!-- <div class="swiper-slide"><img src="photo1.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="photo2.jpg" alt=""></div> -->
+                <div class="swiper-slide"><img src="gujaratiunlimited.jpeg" alt="">
+                    <h3 class="h3">Get Gujarati Unlimited Lunch @99</h3>
+                </div>
+                <div class="swiper-slide"><img src="frankiecombo.jpeg" alt="">
+                    <h3 class="h3">Buy 2 Frankie with Pespi @79</h3>
+                </div>
+                <div class="swiper-slide"><img src="pavbhaji.jpeg" alt="">
+                    <h3 class="h3">Buy One Get One Free @150</h3>
+                </div>
+                <div class="swiper-slide"><img src="dinnercombo.jpeg" alt="">
+                    <h3 class="h3">Get Punjabi Unlimited Dinner @119</h3>
+                </div>
+                <div class="swiper-slide"><img src="manchurian.jpeg" alt="">
+                    <h3 class="h3">Flat 20% OFF On This Combo</h3>
+                </div>
+                <div class="swiper-slide"><img src="pizzacombo.jpeg" alt="">
+                    <h3 class="h3">Buy One Get One Free Pizza @129</h3>
+                </div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+        </div>
+
+    </div><br>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 1500,
+                disableonInteraction: false,
+            },
+
+            loop: true,
+
+            // If we need pagination
+            //   pagination: {
+            //     el: '.swiper-pagination',
+            //     clickable: true,
+            //   },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+        });
+    </script>
+    <br>
+    <h1 class="h1">OUR DISHES</h1><br><br>
+    <div class="maindishes">
+
+        <button type="submit" class="onsubmit">ALL</button>
+        <button type="submit" class="onsubmit">PIZZA</button>
+        <button type="submit" class="onsubmit">DHOSA</button>
+        <button type="submit" class="onsubmit">PANEERTIKKA</button>
+        <button type="submit" class="onsubmit">KHAMAN</button>
+        <button type="submit" class="onsubmit">MANCHURIAN</button>
+
+    </div>
+    <br><br>
+    <div class="xyz">
+    <div class="photo">
+        <div class="p11">
+            <div class="photo1">
+                <div class="photo11">
+                    <img src="pizza2.jpg" alt="">
+                    <br>
+                    <h3>Thin Crust Pizza</h3>
+                    <h2>@149</h2> 
+                   <br>
+                   <a href="order1.html" class="order1">Order</a>
+                    <br><br>
+                    
+                </div>
+                <div class="photo11">
+                    <img src="pizza3.jpg" alt="">
+                    <h3>7-Cheesy Pizza</h3>
+                    <h2>@199</h2>
+                    <br>
+                    <a href="order1.html" class="order1">Order</a>
+                </div>
+                <div class="photo11">
+                    <img src="pizza4.jpg" alt="">
+                    <h3>
+                        Maxican Pizza
+                    </h3>
+                    <h2>@179</h2>
+                    <br><a href="order1.html" class="order1">Order</a>
+                </div>
+                <div class="photo11">
+                    <img src="pizza5.jpg" alt="">
+                    <h3>Cheese Brust Pizza</h3>
+                    <h2>@159</h2>
+                    <br>
+                    <a href="order1.html" class="order1">Order</a>
+                </div>
+            </div><br>
+        </div> 
+
+     
+
+            <div class="photo2">
+                <div class="photo21">
+                    <img src="chinese1.jpg" alt="">
+                    <h3>
+                        Manchurian
+                    </h3>
+                    <h2>@79</h2><br>
+                    <a href="order2.html" class="order1">Order</a>
+                </div>
+                <div class="photo21">
+                    <img src="chinese2.jpg" alt="">
+                    <h3>Noodles</h3>
+                    <h2>@99</h2><br>
+                    <a href="order2.html" class="order1">Order</a>
+                    
+                </div>
+                <div class="photo21">
+                    <img src="chinese3.jpg" alt="">
+                    <h3>Spring Roll</h3>
+                    <h2>109</h2><br>
+                    <a href="order2.html" class="order1">Order</a>
+                    
+                </div>
+                <div class="photo21">
+                    <img src="chinese4.jpg" alt="">
+                    <h3>Manchaow Soup</h3>
+                    <h2>@89</h2>
+                    <br>
+                    <a href="order2.html" class="order1">Order</a>
+                <br><br>
+                </div>
+            </div><br>
+        
+            <span class="show-1 hide-1">
+            <div class="photo3">
+                <div class="photo31">
+                    <img src="maxican2.jpg" alt="">
+                    <h3>Nachos</h3>
+                    <h2>@119</h2><br><a href="order3.html" class="order1">Order</a>
+                </div>
+                <div class="photo31">
+                    <img src="mexican3.jpg" alt="">
+                    <h3>Burrito Bowl</h3>
+                    <h2>@179</h2><br><a href="order3.html" class="order1">Order</a>
+                </div>
+                <div class="photo31">
+                    <img src="mexican4.jpg" alt="">
+                    <h3>Salsa</h3>
+                    <h2>@149</h2><br><a href="order3.html" class="order1">Order</a>
+                </div>
+                <div class="photo31">
+                    <img src="mexican1.jpg" alt="">
+                    <h3>Tacos</h3>
+                    <h2>@69</h2><br><a href="order3.html" class="order1">Order</a><br><br>
+                </div>
+
+            </div><br>
+            <div class="photo4">
+                <div class="photo41">
+                    <img src="bhajiya.jpg" alt="">
+                    <h3>Bhajiya</h3>
+                    <h2>@39</h2><br><a href="order4.html" class="order1">Order</a>
+                </div>
+                <div class="photo41">
+                    <img src="fafda-jalebi.jpg" alt="">
+                    <h3>Jalebi-Fafda</h3>
+                    <h2>@79</h2><br><a href="order4.html" class="order1">Order</a>
+                </div>
+                <div class="photo41">
+                    <img src="Gulab-jamun.jpg" alt="">
+                    <h3>Gulab-Jamun</h3>
+                    <h2>@249</h2><br><a href="order4.html" class="order1">Order</a>
+                </div>
+                <div class="photo41">
+                    <img src="khaman.jpg" alt="">
+                    <h3>Khaman</h3>
+                    <h2>@79</h2><br><a href="order4.html" class="order1">Order</a>
+                    <br><br>
+                </div>
+            </div><br>
+            <div class="photo5">
+                <div class="photo51">
+                    <img src="paneer angara.jpg" alt="">
+                    <h3>Paneer-Angara</h3>
+                    <h2>@189</h2><br><a href="order5.html" class="order1">Order</a>
+                </div>
+                <div class="photo51">
+                    <img src="kaju panner.jpg" alt="">
+                    <h3>Kaju-Paneer</h3>
+                    <h2>@179</h2><br><a href="order5.html" class="order1">Order</a>
+                </div>
+                <div class="photo51">
+                    <img src="dal makhani.jpg" alt="">
+                    <h3>Dal-Makhani</h3>
+                    <h2>@149</h2><br><a href="order5.html" class="order1">Order</a>
+                </div>
+                <div class="photo51">
+                    <img src="paaneer bhurji.jpg" alt="">
+                    <h3>Paneer Bhurji</h3>
+                    <h2>@189</h2><br><a href="order5.html" class="order1">Order</a><br><br>
+                </div>
+            </div><br>
+            <div class="photo6">
+                <div class="photo61">
+                    <img src="idli.jpg" alt="">
+                    <h3>Idli</h3>
+                    <h2>@89</h2><br><a href="order6.html" class="order1">Order</a>
+                </div>
+                <div class="photo61">
+                    <img src="dhosa.jpg" alt="">
+                    <h3>Dhosa</h3>
+                    <h2>@119</h2><br><a href="order6.html" class="order1">Order</a>
+
+                </div>
+                <div class="photo61">
+                    <img src="menduvada.jpg" alt="">
+                    <h3>Menduvada</h3>
+                    <h2>@59</h2><br><a href="order6.html" class="order1">Order</a>
+                </div>
+                <div class="photo61">
+                    <img src="uttapam.jpg" alt="">
+                    <h3>Uttapam</h3>
+                    <h2>@49</h2><br><a href="order6.html" class="order1">Order</a><br><br>
+                </div>
+            </div><br>
+            <div class="photo7">
+                <div class="photo71">
+                    <img src="italian5.jpg" alt="">
+                    <h3>Italian soup</h3>
+                    <h2>@99</h2><br><a href="order7.html" class="order1">Order</a>
+                </div>
+                <div class="photo71">
+                    <img src="italian2.jpg" alt="">
+                    <h3>White Sauce Pasta </h3>
+                    <h2>@129</h2><br><a href="order7.html" class="order1">Order</a>
+                </div>
+                <div class="photo71">
+                    <img src="italian1.jpg" alt="">
+                    <h3>Red Sauce Pasta</h3>
+                    <h2>@119</h2><br><a href="order7.html" class="order1">Order</a>
+                </div>
+                <div class="photo71">
+                    <img src="italian4.jpg" alt="">
+                    <h3>Lasagna</h3>
+                    <h2>
+                        @139
+                    </h2><br>
+                    <a href="order7.html" class="order1">Order</a>
+                    <br><br>
+                </div>
+
+            </div><br>
+
+
+        </span>
+       <h1> <button id="btn-1" class="btn-11">See More</button></h1>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="footer">
+        <div class="footer1">
+            <div class="footer11">
+                <br><br>
+                <h3>Address</h3>
+                <br>
+    
+            </div>
+    
+            <div class="footer12">
+                <p>
+                    Gurukrupa complex,motipura</p>
+                <p>Circle,motipura</p>
+                <p>Himatnagar</p>
+                <P>Gujarat,380006</P>
+    
+            </div>
+    
+        </div>
+        <div class="footer2">
+            <div class="footer21">
+                <br><br>
+                <h3>Navigate</h3><br>
+            </div>
+            <div class="footer22">
+    
+                <li><a href="index.html">Home</a></li><br>
+                <li><a href="about.html">About</a></li><br>
+                <li><a href="menu.html">Activity</a></li><br>
+                <li><a href="blog.html">Blog</a></li><br>
+                <li><a href="contact.html">Contact</a></li><br>
+    
+    
+            </div>
+        </div>
+        <div class="footer3">
+            <div class="footer31">
+                <br><br>
+                <h3>Follow me</h3><br>
+            </div>
+            <div class="footer32">
+    
+                <i class="fa-brands fa-facebook fa-2x"></i></a>&nbsp;
+                <i class="fa-brands fa-instagram fa-2x"></i></a>&nbsp;
+                <i class="fa-brands fa-twitter fa-2x"></i></a>
+                <i class="fa-solid fa-envelope fa-2x"></i>
+    
+    
+            </div><br>
+            <!-- <div>
+                <i class="fa-solid fa-envelope fa-2x"></i>
+                <h3>EMAIL</h3>
+                <h4>darshpatel95952002@gmail.com</h4><br>
+    
+             </div> -->
+            <div>
+                <i class="fa-solid fa-phone fa-2x"></i>
+                <h3>PHONE</h3>
+                <h4>+91-2233445566</h4><br>
+            </div>
+        </div>
+    
+    </div>
+    <div class="footer4">
+        <h3>Copywrite 2022 Reserved</h3>
+        <br><br>
+    </div>
+    <script>
+          const btn = document.querySelector('#btn-1');
+            const text = document.querySelector('.show-1');
+            btn.addEventListener('click', function () {
+                text.classList.toggle('hide-1')
+                btn.textContent == "See More"
+
+                    ? (btn.textContent = "See Less") : (btn.textContent = "See More");
+            })
+    </script>
+    
+</body>
+
+</html>
